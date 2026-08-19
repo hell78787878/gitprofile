@@ -10,6 +10,8 @@ interface AvatarCardProps {
   resumeFileUrl?: string;
 }
 
+const externalKattappaImage = "https://static.toiimg.com/thumb/imgsize-23456,msid-76891161,width-600,resizemode-4/76891161.jpg"
+
 /**
  * Renders an AvatarCard component.
  * @param profile - The profile object.
@@ -54,14 +56,10 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
               }`}
             >
               <LazyImage
-                src={avatarSrc}
-                alt={`${kattappaName} Avatar`}
-                placeholder={skeleton({
-                  widthCls: 'w-full',
-                  heightCls: 'h-full',
-                  shape: '',
-                })}
-              />
+  src={externalKattappaImage}
+  alt="Kattappa Avatar"
+  placeholder={skeleton({ widthCls: 'w-full', heightCls: 'h-full', shape: '' })}
+/>
             </div>
           </div>
         )}
