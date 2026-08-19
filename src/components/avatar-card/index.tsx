@@ -10,7 +10,8 @@ interface AvatarCardProps {
   resumeFileUrl?: string;
 }
 
-const externalKattappaImage = "https://static.toiimg.com/thumb/imgsize-23456,msid-76891161,width-600,resizemode-4/76891161.jpg"
+// ⚠️ WARNING: This TOI image URL is unreliable and may break
+const externalKattappaImage = "https://static.toiimg.com/thumb/imgsize-23456,msid-76891161,width-600,resizemode-4/76891161.jpg";
 
 /**
  * Renders an AvatarCard component.
@@ -29,9 +30,6 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
   // Kattappa-specific information
   const kattappaName = "Kattappa";
   const kattappaBio = "Loyal commander of the Mahishmati kingdom's army and mentor to Amarendra Baahubali. Known for his unwavering sense of duty, sacrifice, and legendary oath to the throne.";
-  
-  // Use profile avatar if available, otherwise fall back to a stable Kattappa image, then your default FALLBACK_IMAGE
-  const avatarSrc = profile?.avatar || "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Sathyaraj_filming_Bahubali_the_Conclusion_%28cropped%29.jpg/440px-Sathyaraj_filming_Bahubali_the_Conclusion_%28cropped%29.jpg" || FALLBACK_IMAGE;
 
   return (
     <div className="card shadow-lg card-sm bg-base-100">
@@ -49,17 +47,21 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
         ) : (
           <div className="avatar opacity-90">
             <div
-              className={`mb-8 rounded-full w-32 h-32 ${
+              className={`mb-8 rounded-full w-32 h-32 overflow-hidden ${
                 avatarRing
                   ? 'ring-3 ring-primary ring-offset-base-100 ring-offset-2'
                   : ''
               }`}
             >
               <LazyImage
-  src={externalKattappaImage}
-  alt="Kattappa Avatar"
-  placeholder={skeleton({ widthCls: 'w-full', heightCls: 'h-full', shape: '' })}
-/>
+                src={externalKattappaImage}
+                alt="Kattappa Avatar"
+                placeholder={skeleton({ 
+                  widthCls: 'w-full', 
+                  heightCls: 'h-full', 
+                  shape: '' 
+                })}
+              />
             </div>
           </div>
         )}
