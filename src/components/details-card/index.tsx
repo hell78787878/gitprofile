@@ -180,14 +180,14 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
                 <ListItem
                   icon={<MdLocationOn />}
                   title="Based in:"
-                  value={profile.location}
+                  value=" Mahishmati"
                 />
               )}
               {profile.company && (
                 <OrganizationItem
                   icon={<FaBuilding />}
                   title="Organization:"
-                  value={profile.company}
+                  value="Army"
                   link={
                     isCompanyMention(profile.company.trim())
                       ? companyLink(profile.company.trim())
