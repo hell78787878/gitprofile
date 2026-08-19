@@ -11,7 +11,7 @@ interface AvatarCardProps {
 }
 
 // ⚠️ WARNING: This TOI image URL is unreliable and may break
-const externalKattappaImage = "https://static.toiimg.com/thumb/imgsize-23456,msid-76891161,width-600,resizemode-4/76891161.jpg";
+const externalKattappaImage = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Sathyaraj_filming_Bahubali_the_Conclusion_%28cropped%29.jpg/440px-Sathyaraj_filming_Bahubali_the_Conclusion_%28cropped%29.jpg";
 
 /**
  * Renders an AvatarCard component.
