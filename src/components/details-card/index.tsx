@@ -198,14 +198,14 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
               <ListItem
                 icon={<AiFillGithub />}
                 title="GitHub:"
-                value={github.username}
+                value="Katappa"
                 link={`https://github.com/${github.username}`}
               />
               {social?.researchGate && (
                 <ListItem
                   icon={<SiResearchgate />}
                   title="ResearchGate:"
-                  value={social.researchGate}
+                  value="Katappa"
                   link={`https://www.researchgate.net/profile/${social.researchGate}`}
                 />
               )}
@@ -213,7 +213,7 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
                 <ListItem
                   icon={<SiX />}
                   title="X:"
-                  value={social.x}
+                  value="Katappa"
                   link={`https://x.com/${social.x}`}
                 />
               )}
@@ -229,7 +229,7 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
                 <ListItem
                   icon={<FaLinkedin />}
                   title="LinkedIn:"
-                  value={social.linkedin}
+                  value="Katappa"
                   link={`https://www.linkedin.com/in/${social.linkedin}`}
                 />
               )}
@@ -237,7 +237,7 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
                 <ListItem
                   icon={<CgDribbble />}
                   title="Dribbble:"
-                  value={social.dribbble}
+                  value="Katappa"
                   link={`https://dribbble.com/${social.dribbble}`}
                 />
               )}
@@ -245,7 +245,7 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
                 <ListItem
                   icon={<FaBehanceSquare />}
                   title="Behance:"
-                  value={social.behance}
+                  value="Katappa"
                   link={`https://www.behance.net/${social.behance}`}
                 />
               )}
@@ -253,7 +253,7 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
                 <ListItem
                   icon={<FaFacebook />}
                   title="Facebook:"
-                  value={social.facebook}
+                  value="Katappa"
                   link={`https://www.facebook.com/${social.facebook}`}
                 />
               )}
@@ -261,7 +261,7 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
                 <ListItem
                   icon={<AiFillInstagram />}
                   title="Instagram:"
-                  value={social.instagram}
+                  value="Katappa"
                   link={`https://www.instagram.com/${social.instagram}`}
                 />
               )}
@@ -269,7 +269,7 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
                 <ListItem
                   icon={<FaReddit />}
                   title="Reddit:"
-                  value={social.reddit}
+                  value="Katappa"
                   link={`https://www.reddit.com/user/${social.reddit}`}
                 />
               )}
@@ -277,7 +277,7 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
                 <ListItem
                   icon={<FaSquareThreads />}
                   title="Threads:"
-                  value={social.threads}
+                  value="Katappa"
                   link={`https://www.threads.net/@${social.threads.replace('@', '')}`}
                 />
               )}
@@ -285,7 +285,7 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
                 <ListItem
                   icon={<FaYoutube />}
                   title="YouTube:"
-                  value={`@${social.youtube}`}
+                  value="Katappa"
                   link={`https://www.youtube.com/@${social.youtube}`}
                 />
               )}
@@ -293,7 +293,7 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
                 <ListItem
                   icon={<SiUdemy />}
                   title="Udemy:"
-                  value={social.udemy}
+                  value="Katappa"
                   link={`https://www.udemy.com/user/${social.udemy}`}
                 />
               )}
@@ -301,7 +301,7 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
                 <ListItem
                   icon={<AiFillMediumSquare />}
                   title="Medium:"
-                  value={social.medium}
+                  value="Katappa"
                   link={`https://medium.com/@${social.medium}`}
                 />
               )}
@@ -309,7 +309,7 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
                 <ListItem
                   icon={<FaDev />}
                   title="Dev:"
-                  value={social.dev}
+                  value="Katappa"
                   link={`https://dev.to/${social.dev}`}
                 />
               )}
@@ -355,7 +355,7 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
                 <ListItem
                   icon={<RiMailFill />}
                   title="Email:"
-                  value={social.email}
+                  value="Katappa@mahishmati.com"
                   link={`mailto:${social.email}`}
                 />
               )}
