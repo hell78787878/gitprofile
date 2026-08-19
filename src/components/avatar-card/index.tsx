@@ -10,16 +10,11 @@ interface AvatarCardProps {
   resumeFileUrl?: string;
 }
 
-// ⚠️ WARNING: This TOI image URL is unreliable and may break
+// ⚠️ WARNING: This external URL may break or be blocked
 const externalKattappaImage = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Sathyaraj_filming_Bahubali_the_Conclusion_%28cropped%29.jpg/440px-Sathyaraj_filming_Bahubali_the_Conclusion_%28cropped%29.jpg";
 
 /**
  * Renders an AvatarCard component.
- * @param profile - The profile object.
- * @param loading - A boolean indicating if the profile is loading.
- * @param avatarRing - A boolean indicating if the avatar should have a ring.
- * @param resumeFileUrl - The URL of the resume file.
- * @returns JSX element representing the AvatarCard.
  */
 const AvatarCard: React.FC<AvatarCardProps> = ({
   profile,
@@ -61,6 +56,10 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
                   heightCls: 'h-full', 
                   shape: '' 
                 })}
+                // ✅ Use FALLBACK_IMAGE if the external image fails to load
+                onError={(e: React.SyntheticEvent<HTMLImageElement>) => {
+                  e.currentTarget.src = FALLBACK_IMAGE;
+                }}
               />
             </div>
           </div>
