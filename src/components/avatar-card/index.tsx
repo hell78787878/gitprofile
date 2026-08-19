@@ -49,7 +49,6 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
               {
                 <LazyImage
                   src="https://static.toiimg.com/thumb/imgsize-23456,msid-76891161,width-600,resizemode-4/76891161.jpg"
-                  alt={profile.name}
                   placeholder={skeleton({
                     widthCls: 'w-full',
                     heightCls: 'h-full',
