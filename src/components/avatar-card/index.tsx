@@ -24,6 +24,13 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
   avatarRing,
   resumeFileUrl,
 }): React.JSX.Element => {
+  // Kattappa-specific information
+  const kattappaName = "Kattappa";
+  const kattappaBio = "Loyal commander of the Mahishmati kingdom's army and mentor to Amarendra Baahubali. Known for his unwavering sense of duty, sacrifice, and legendary oath to the throne.";
+  
+  // Use profile avatar if available, otherwise fall back to a stable Kattappa image, then your default FALLBACK_IMAGE
+  const avatarSrc = profile?.avatar || "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Sathyaraj_filming_Bahubali_the_Conclusion_%28cropped%29.jpg/440px-Sathyaraj_filming_Bahubali_the_Conclusion_%28cropped%29.jpg" || FALLBACK_IMAGE;
+
   return (
     <div className="card shadow-lg card-sm bg-base-100">
       <div className="grid place-items-center py-8">
@@ -46,35 +53,38 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
                   : ''
               }`}
             >
-              {
-                <LazyImage
-                  src="https://static.toiimg.com/thumb/imgsize-23456,msid-76891161,width-600,resizemode-4/76891161.jpg"
-                  placeholder={skeleton({
-                    widthCls: 'w-full',
-                    heightCls: 'h-full',
-                    shape: '',
-                  })}
-                />
-              }
+              <LazyImage
+                src={avatarSrc}
+                alt={`${kattappaName} Avatar`}
+                placeholder={skeleton({
+                  widthCls: 'w-full',
+                  heightCls: 'h-full',
+                  shape: '',
+                })}
+              />
             </div>
           </div>
         )}
+        
         <div className="text-center mx-auto px-8">
           <h5 className="font-bold text-2xl">
             {loading || !profile ? (
               skeleton({ widthCls: 'w-48', heightCls: 'h-8' })
             ) : (
               <span className="text-base-content opacity-70">
-                {profile.name}
+                {kattappaName}
               </span>
             )}
           </h5>
           <div className="mt-3 text-base-content font-mono">
-            {loading || !profile
-              ? skeleton({ widthCls: 'w-48', heightCls: 'h-5' })
-              : profile.bio}
+            {loading || !profile ? (
+              skeleton({ widthCls: 'w-48', heightCls: 'h-5' })
+            ) : (
+              kattappaBio
+            )}
           </div>
         </div>
+        
         {resumeFileUrl &&
           (loading ? (
             <div className="mt-6">
